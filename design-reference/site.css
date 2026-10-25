@@ -12,3 +12,5 @@
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.sw-scene__still{transform:none!important}}
 
 .sw-btn--primary{color:#f7faef!important}.sw-btn--primary:hover{color:#fff!important}
+
+.world-paused .sw-stage{visibility:visible!important}
