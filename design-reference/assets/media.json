@@ -1,0 +1,66 @@
+{
+  "scenes": [
+    {
+      "id": "shell",
+      "source": "videos/ForgeClip AI ( Scroll World Website Videos )/01-outer-shell.mp4.mp4",
+      "clip": "assets/vid/shell.mp4",
+      "poster": "assets/shell-poster.webp",
+      "suppliedStill": "assets/shell.webp",
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "frames": 192,
+      "duration": 8
+    },
+    {
+      "id": "mechanism",
+      "source": "videos/ForgeClip AI ( Scroll World Website Videos )/02-mechanism.mp4.mp4",
+      "clip": "assets/vid/mechanism.mp4",
+      "poster": "assets/mechanism-poster.webp",
+      "suppliedStill": "assets/mechanism.webp",
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "frames": 192,
+      "duration": 8
+    },
+    {
+      "id": "circuit",
+      "source": "videos/ForgeClip AI ( Scroll World Website Videos )/03-circuit-city.mp4.mp4",
+      "clip": "assets/vid/circuit.mp4",
+      "poster": "assets/circuit-poster.webp",
+      "suppliedStill": "assets/circuit.webp",
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "frames": 192,
+      "duration": 8
+    },
+    {
+      "id": "core",
+      "source": "videos/ForgeClip AI ( Scroll World Website Videos )/04-core.mp4.mp4",
+      "clip": "assets/vid/core.mp4",
+      "poster": "assets/core-poster.webp",
+      "suppliedStill": "assets/core.webp",
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "frames": 192,
+      "duration": 8
+    },
+    {
+      "id": "reveal",
+      "source": "videos/ForgeClip AI ( Scroll World Website Videos )/05-final-reveal.mp4.mp4",
+      "clip": "assets/vid/reveal.mp4",
+      "poster": "assets/reveal-poster.webp",
+      "suppliedStill": "assets/reveal.webp",
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "frames": 192,
+      "duration": 8
+    }
+  ],
+  "transitions": "dissolve; supplied set contains no connector clips",
+  "portrait": false
+}
