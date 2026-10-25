@@ -1,6 +1,4 @@
 """ForgeClip's external ffmpeg worker. Python stdlib + ffmpeg; no provider SDKs."""
-import concurrent.futures
-import hashlib
 import hmac
 import http.server
 import json
@@ -92,6 +90,7 @@ def initialize():
     with connection() as db:
         db.execute('PRAGMA journal_mode=WAL')
         db.execute('CREATE TABLE IF NOT EXISTS jobs (id TEXT PRIMARY KEY, status TEXT NOT NULL, payload TEXT NOT NULL, result TEXT, attempts INTEGER NOT NULL DEFAULT 0, updated REAL NOT NULL)')
+        db.execute('CREATE INDEX IF NOT EXISTS queue_status_updated ON jobs (status,updated)')
         db.execute("UPDATE jobs SET status='queued' WHERE status='running'")
 
 def enqueue(payload):
@@ -193,6 +192,9 @@ def worker():
 
 class Handler(http.server.BaseHTTPRequestHandler):
     server_version = 'ForgeClipExtractor/1'
+    def setup(self):
+        super().setup()
+        self.request.settimeout(15)
     def log_message(self, *_):
         pass
     def respond(self, code, value):
